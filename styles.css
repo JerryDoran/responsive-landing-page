@@ -4,6 +4,7 @@
 .light {
   --mainColor: #64bcf4;
   --hoverColor: #5bacdf;
+  --btnHoverColor: #3075a0;
   --backgroundColor: #f1f8fc;
   --darkOne: #321f3a;
   --darkTwo: #45424b;
@@ -14,6 +15,7 @@
 .dark {
   --mainColor: #64bcf4;
   --hoverColor: #5bacdf;
+  --btnHoverColor: #3075a0;
   --backgroundColor: #0e1a20;
   --darkOne: #f3f3f3;
   --darkTwo: #fff;
@@ -88,7 +90,7 @@ a {
 }
 
 .btn:hover {
-  background-color: var(--hoverColor);
+  background-color: var(--btnHoverColor);
 }
 
 .shape {
@@ -143,7 +145,7 @@ header .container {
 
 .links a:hover {
   color: var(--hoverColor);
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 /* SHOWCASE AREA */
@@ -202,4 +204,26 @@ header .container {
 
 .toggle-btn:hover {
   background-color: var(--mainColor);
+}
+
+.copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  animation: appear 1s 1 both;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes appear {
+  0% {
+    clip-path: circle(30% at -25% -25%);
+  }
+  100% {
+    clip-path: circle(150% at 0 0);
+  }
 }
